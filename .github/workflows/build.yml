@@ -11,7 +11,7 @@ on:
       - '**/README.md'
 env:
   BUILD_NUMBER: ${{ github.run_number }}
-  PROJECT_PATH: "CS2-DeleteLogs/CS2-DeleteLogs.csproj"
+  PROJECT_PATH: "CS2-DeleteLogs.csproj"
   PROJECT_NAME: "CS2-DeleteLogs"
   OUTPUT_PATH: "./CS2-DeleteLogs"
 
