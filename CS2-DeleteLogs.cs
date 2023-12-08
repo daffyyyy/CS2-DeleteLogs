@@ -51,7 +51,7 @@ public class CS2_DeleteLogs : BasePlugin, IPluginConfig<CS2_DeleteLogsConfig>
 			// Get all files in the directory
 			FileInfo[] files = directoryInfo.GetFiles();
 
-			// Calculate the date 14 days ago
+			// Calculate the date
 			DateTime expiredDate = DateTime.Now.AddDays(-Config.LogsOlderThan);
 
 			bool deleteBigger = Config.DeleteLogsOnlyBiggerThan;
@@ -59,7 +59,7 @@ public class CS2_DeleteLogs : BasePlugin, IPluginConfig<CS2_DeleteLogsConfig>
 
 			foreach (FileInfo file in files)
 			{
-				// Check if the file's last write time is older than 14 days
+				// Check if the file's last write time is older than x days
 				if (file.LastWriteTime < expiredDate)
 				{
 					if (deleteBigger)
